@@ -6,12 +6,18 @@ const EmployeeModel = require('./models/Employee');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
 
 
 //Database connection
 
-mongoose.connect('mongodb://127.0.0.1:27017/employee', {
+mongoose.connect(mongodb+srv://narendrakori2004:N3hlJLbjhRUKtDzm@cluster0.emtsutb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
