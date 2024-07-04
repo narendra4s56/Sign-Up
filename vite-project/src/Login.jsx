@@ -70,7 +70,7 @@ function Login() {
           </button>
         </form>
         <p>Haven't account</p>
-          <Link to={"/register"} className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
+          <Link to={"/"} className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
             Signup
           </Link>
       </div>
